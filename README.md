@@ -37,7 +37,7 @@ The solution is quite simple. Follow these steps:
 4. right after that, put the copying code
 <pre>
 &lt;script type=&quot;text/javascript&quot;&gt;
-gr.ads.move(&#39;728x90&#39;);
+burst.ads.move(&#39;728x90&#39;);
 &lt;/script&gt;
 </pre>
 
