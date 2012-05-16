@@ -1,4 +1,4 @@
-iframe-buster
+What is it?
 =============
 Library that allows post loading of content/ads after the entire page has loaded, thus saving overall loading time.
 
@@ -12,40 +12,34 @@ If the ad delivery provider is slow, the page is slow. And they are often slow. 
 The solution
 =============
 
-Move the ads to the bottom, after all the content!
-
-Yeah, try to propose this to your sales department. So the ads must stay at the top. But why not load them at the bottom and then show them at the top?
-
-Well, the sales don't like this neither, but it has too heavy good sides, so you'll convince them:
-* the site is fast
-* the user likes fast site, thus does not leave and the probablity of ad click goes up
-
+Move the ads to the bottom, after all the content. We understand the ads must stay at the top, but why not load them at the bottom and then show them at the top?
 
 How do use the code
 =============
 
 The solution is quite simple. Follow these steps:
 
-1. Load in our small javascript library at the top of your header:
+1. Load in our small javascript library at the top of your header (We encourage you to look at the code as you might come up with something better and add on to our exsiting code.):
 <pre>
-<script src="js/burst.postload.js" type="text/javascript"></script>  
+&lt;script src=&quot;js/burst.postload.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;  
 </pre>
 
 2. In the place where you originally displayed the AD tags, display an empty DIV with specific ID. You can choose to hide it, or show it with the final dimensions - depends on your opinion what users like more - sudden displaying, or empty spaces.
 <pre>
-<div id="banner_container_728x90"></div>
+&lt;div id=&quot;banner_container_728x90&quot;&gt;&lt;/div&gt;
 </pre>
 
 3. in the footer of the page, after loading all you site's content and javascript and probably before statistics scripts (again a thing to think about), put the actual ad tags:
 <pre>
-<div id="banner_data_728x90"></div>
+&lt;div id=&quot;banner_data_728x90&quot;&gt;&lt;/div&gt;
 </pre>
 
-4. right after that, put the copying code - we use a small library at [http://www.gameriot.com/lib/ads.js], but i encourage to look at the code and you might as well come up with something better.
+4. right after that, put the copying code
 <pre>
-<script type="text/javascript">
-gr.ads.move('728x90');
-</script>
+&lt;script type=&quot;text/javascript&quot;&gt;
+gr.ads.move(&#39;728x90&#39;);
+&lt;/script&gt;
 </pre>
+
 
 Important: the actual moving of the ad is done by moving the enclosing DIV using DOM movement. This way the inner real ad elements are untouched, things don't happen twice etc.
