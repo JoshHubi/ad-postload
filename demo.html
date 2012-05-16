@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Burst Postload Demo</title>
+
+<!-- style helper for demo only -->
+<link href="temp/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<!-- 1. load in postload library -->
+<script src="js/burst.postload.js" type="text/javascript"></script>  
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="leader">
+    	
+        <!-- 2. in the place where you originally displayed the AD tags, display an empty DIV with specific ID. You can choose to hide it, or show it with the final dimensions - depends on your opinion what users like more - sudden displaying, or empty spaces. -->
+    	<div id="banner_container_728x90"></div>
+    
+    </div>
+    
+    <div class="box">
+    
+    	<!-- 3. in the place where you originally displayed the AD tags, display an empty DIV with specific ID. You can choose to hide it, or show it with the final dimensions - depends on your opinion what users like more - sudden displaying, or empty spaces. -->
+    	<div id="banner_container_300x250"></div>
+        
+    </div>
+</div>
+
+
+<!-- in the footer of the page, after loading all you site's content and javascript and probably before statistics scripts (again a thing to think about), put the actual ad tags: -->
+<div id="banner_data_728x90">
+	<script type="text/javascript">
+        var gr_ads_zone = 'homepage';
+        var gr_ads_size = '728x90';
+    </script>
+    <script type="text/javascript" src="http://a.giantrealm.com/gr.demo/a.js">
+    </script>
+    <noscript>
+        <a href="http://ans.giantrealm.com/click/gr.demo/homepage;tile=1;sz=728x90;ord=1234567890">
+            <img src="http://ans.giantrealm.com/img/gr.demo/homepage;tile=1;sz=728x90;ord=1234567890" width="728" height="90" alt="advertisement" />
+        </a>
+    </noscript>
+</div>
+
+<!-- right after that, put the copying code -->
+<script type="text/javascript">
+burst.ads.move('728x90');
+</script>
+
+
+<!-- then repeat! -->
+
+<div id="banner_data_300x250">
+	<script type="text/javascript">
+        var gr_ads_zone = 'homepage';
+        var gr_ads_size = '300x250';
+    </script>
+    <script type="text/javascript" src="http://a.giantrealm.com/gr.demo/a.js">
+    </script>
+    <noscript>
+        <a href="http://ans.giantrealm.com/click/gr.demo/homepage;tile=1;sz=728x90;ord=1234567890">
+            <img src="http://ans.giantrealm.com/img/gr.demo/homepage;tile=1;sz=728x90;ord=1234567890" width="300" height="250" alt="advertisement" />
+        </a>
+	</noscript>
+</div>
+
+<script type="text/javascript">
+burst.ads.move('300x250');
+</script>
+
+</body>
+</html>
