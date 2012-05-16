@@ -29,12 +29,12 @@ The solution is quite simple. Follow these steps:
 &lt;div id=&quot;banner_container_728x90&quot;&gt;&lt;/div&gt;
 </pre>
 
-3. in the footer of the page, after loading all you site's content and javascript and probably before statistics scripts (again a thing to think about), put the actual ad tags:
+3. In the footer of your page, after loading all you site's content, javascript, and before statistics scripts (again a thing to think about), put the actual ad tags:
 <pre>
 &lt;div id=&quot;banner_data_728x90&quot;&gt;&lt;/div&gt;
 </pre>
 
-4. right after that, put the copying code
+4. Directly after that, place the copying code.
 <pre>
 &lt;script type=&quot;text/javascript&quot;&gt;
 burst.ads.move(&#39;728x90&#39;);
